@@ -1,0 +1,17 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav color="primary" class="sidenav" #sidenav [mode]="mode" [opened]="opened" (click)="closeNav()">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" routerLinkActive="active" (click)="closeNav()">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </a>
+      <a mat-list-item routerLink="/Mange" routerLinkActive="active" (click)="closeNav()">
+        <mat-icon>style</mat-icon>
+        <span>Add Driver</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

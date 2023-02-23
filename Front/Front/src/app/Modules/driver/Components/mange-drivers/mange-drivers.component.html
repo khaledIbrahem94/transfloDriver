@@ -1,0 +1,31 @@
+<form [formGroup]="DriverForm" >
+  <mat-grid-list cols="1" rowHeight="60px">
+    <mat-grid-tile colspan="1">
+      <h2>Registration Form</h2>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button *ngIf="!Update" (click)="onInsert()">Submit</button>
+      <button mat-raised-button *ngIf="Update" (click)="onUpdate()" [mat-dialog-close]="true">Update</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
